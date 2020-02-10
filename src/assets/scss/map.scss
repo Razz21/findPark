@@ -1,0 +1,69 @@
+.drawer {
+  > * {
+    @extend .small-scroll;
+  }
+
+  .v-divider {
+    border-color: $white-color !important;
+    opacity: 0.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: $white-color;
+    font-weight: 400;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  p,
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    // margin-bottom: 0;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.2rem;
+  }
+
+  .description {
+    color: $white-color;
+    opacity: 0.4;
+    margin-bottom: 0.4rem;
+
+    > h3 {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+
+.pulsate .v-snack__content {
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
