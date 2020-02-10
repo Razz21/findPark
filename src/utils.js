@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export function groupBy(arr, property) {
   // group array by property
   return arr.reduce((memo, x) => {
@@ -163,8 +165,8 @@ export function processHoursFilter(location, filter) {
       if (item.fullTime) {
         return true;
       } else {
-        const current = this.$moment(this.$moment().format("HH:mm"), "HH:mm");
-        const close = this.$moment(item.close, "HH:mm");
+        const current = moment(moment().format("HH:mm"), "HH:mm");
+        const close = moment(item.close, "HH:mm");
         return close.diff(current, "minutes") > 0;
       }
     }
