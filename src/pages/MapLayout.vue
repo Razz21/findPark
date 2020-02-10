@@ -5,6 +5,7 @@
       dark
       class="map-info"
       dense
+      dismissible
       transition="fade-transition"
     >
       This is demo project and some of the features are available only in

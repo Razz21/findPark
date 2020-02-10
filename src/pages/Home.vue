@@ -2,14 +2,18 @@
   <div class="container-fluid home overflow-x-hidden" ref="home" id="home">
     <nav ref="nav" class=" sticky top-0">
       <v-container class="d-flex py-4 px-6 align-baseline">
-        <div class="flex-grow-1 text--accent text--lighten-4 headline">
-          Find<b>Park</b>
-        </div>
+        <div class="flex-grow-1 accent--text headline">Find<b>Park</b></div>
 
-        <v-btn outlined color="accent" class="mr-4" :to="{ name: 'signup' }"
-          >SingUp</v-btn
-        >
-        <v-btn depressed color="accent" :to="{ name: 'login' }">Login</v-btn>
+        <template v-if="isAuthenticated">
+          <div class="accent--text mr-4">Hi {{ user.email }}</div>
+          <v-btn outlined color="accent" @click="logout">Logout</v-btn>
+        </template>
+        <template v-else>
+          <v-btn outlined color="accent" class="mr-4" :to="{ name: 'signup' }"
+            >SingUp</v-btn
+          >
+          <v-btn depressed color="accent" :to="{ name: 'login' }">Login</v-btn>
+        </template>
       </v-container>
     </nav>
 
@@ -75,7 +79,7 @@
             </div>
           </div>
           <div class="skewed-background">
-            <div class="observe-item anim-right bg-accent skew-up"></div>
+            <div class="observe-item anim-right accent skew-up"></div>
           </div>
         </div>
 
@@ -125,15 +129,12 @@
             </div>
           </div>
           <div class="skewed-background">
-            <div class="observe-item anim-right skew-up bg-secondary"></div>
+            <div class="observe-item anim-right skew-up secondary"></div>
           </div>
         </div>
       </section>
 
       <section style="min-height:200px">
-        <!-- <div class="skewed-background">
-          <div class="observe-item anim-left  bg-tertiary skew-down"></div>
-        </div> -->
         <div class="left"></div>
         <div class="right"></div>
       </section>
@@ -196,11 +197,18 @@ export default {
     return {};
   },
   computed: {
+    isAuthenticated() {
+      return this.$store.getters["auth/isAuthenticated"];
+    },
     user() {
       return this.$store.getters["auth/getUser"];
     }
   },
-  methods: {},
+  methods: {
+    logout() {
+      this.$store.dispatch("auth/logout");
+    }
+  },
 
   mounted() {
     const items = document.querySelectorAll(".observe-item");

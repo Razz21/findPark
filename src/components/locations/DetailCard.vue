@@ -100,7 +100,7 @@
       </div>
     </div>
 
-    <div class="bg-tertiary flex-grow-1">
+    <div class="tertiary flex-grow-1">
       <div class="pa-8">
         <h3
           class="pa-3 white--text cursor-pointer"

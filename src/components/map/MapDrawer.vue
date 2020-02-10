@@ -6,7 +6,7 @@
     permanent
     hide-overlay
   >
-    <div class="bg-primary">
+    <div class="primary">
       <div class="pb-8 pt-4">
         <div class="py-5 px-2">
           <v-btn x-large text color="accent" exact :to="{ name: 'home' }">
@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-tertiary d-flex flex-column flex-grow-1 pa-8">
+    <div class="tertiary d-flex flex-column flex-grow-1 pa-8">
       <h3 class="mb-1">Filtered <span>Results</span></h3>
       <p class="grey--text text--lighten-2">
         Found {{ resultsCount }} spot(s) matching your conditions.
