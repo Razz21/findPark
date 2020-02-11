@@ -628,9 +628,9 @@ path.leaflet-interactive {
 }
 
 path {
-  animation: draw-path 3s linear forwards;
-  animation-delay: 1.3s; // change map bounds first
-  stroke-dasharray: 110%;
+  animation: draw-path 3s linear both;
+  animation-delay: 1s; // change map bounds first
+  stroke-dasharray: 100%;
 }
 
 @keyframes draw-path {

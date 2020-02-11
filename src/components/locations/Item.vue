@@ -13,21 +13,21 @@
     >
       <div class="d-flex justify-space-between">
         <div class="d-flex align-center">
-          <v-icon small class="full-icon">mdi-currency-usd</v-icon>
-          <span class="subtitle-2" style="color:#eee"
+          <v-icon class="full-icon">mdi-currency-usd</v-icon>
+          <span class="subtitle-1" style="color:#eee"
             >{{ "&nbsp;" }}{{ location.price | currency }}/h</span
           >
         </div>
         <div class="d-flex align-center">
-          <v-icon small class="full-icon">mdi-parking</v-icon>
+          <v-icon class="full-icon">mdi-parking</v-icon>
           <span
-            class="subtitle-2"
+            class="subtitle-1"
             :style="{ color: location.available ? '#eee' : '#db4437' }"
             >{{ "&nbsp;" }}{{ location.available }}{{ "&nbsp;" }}spots</span
           >
         </div>
         <div class="text-center accent distance px-2">
-          <p class="subtitle-2 ma-0 white--text">
+          <p class="subtitle-1 ma-0 white--text">
             {{ convertDistance(location.distance * 1000) }}
           </p>
         </div>
