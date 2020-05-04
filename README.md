@@ -1,41 +1,21 @@
 # findPark
 
-## Project setup
+# About the project
 
-```
-npm install
-```
+Parking spots tracker made with Firebase/Vue.js
 
-### Compiles and hot-reloads for development
+## Features
 
-```
-npm run serve
-```
+* [x] Interactive map
+* [x] Route searching 
+* [x] Dynamic search filters 
 
-### Compiles and minifies for production
 
-```
-npm run build
-```
+## Technologies
+* Firebase
+* Vue js
 
-### Run your tests
+## App demo
 
-```
-npm run test
-```
 
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Run your unit tests
-
-```
-npm run test:unit
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://findpark.netlify.app/
